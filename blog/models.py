@@ -13,3 +13,5 @@ class Blog(models.Model):
     def __str__(self):
         """Unicode representation of MODELNAME."""
         return self.title
+    def short_text(self):
+        return self.text[0:100] + '...'
