@@ -3,7 +3,7 @@ from .models import Blog
 
 # Create your views here.
 def blog_page(request):
-    blogs = Blog.objects
+    blogs = Blog.objects.order_by('-date')
     return render(request,'blog.html',{'blogs':blogs})
 
 def blog_text(request,blog_id):
